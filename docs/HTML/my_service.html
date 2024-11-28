@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my service</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="../CSS/service.css">
+
+  <header class="header">
+    <a href="#" class="logo">Kim</a>
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="./about.html" class="active">About me</a>
+        <a href="./my_service.html">Service</a>
+        <a href="./contact_me.html">Contact me</a>
+    </nav>
+</header>
+</head>
+<body>
+  <section id="service">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service-item">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Our team of experienced developers can create custom websites and web applications tailored to your needs.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Development</h3>
+        <p>We develop responsive and user-friendly mobile apps for both iOS and Android platforms.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-chart-line"></i>
+        <h3>Digital Marketing</h3>
+        <p>Our digital marketing experts can help you boost your online presence and reach your target audience.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<script>
+  // JavaScript for the "Click me" button
+  document.getElementById('clickMeButton').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      alert("Thank you for clicking me!");
+  });
+
+  // Smooth scroll for internal links (if you add sections later)
+  const links = document.querySelectorAll('nav a');
+  links.forEach(link => {
+      link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+              targetElement.scrollIntoView({
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+</script>
+</body>
+</html>
